@@ -152,11 +152,9 @@ function age2 (ages) {
 
 function age3 (ages) {
     let a = (Number(ages))
-       if ( typeof a !== "number") {
+    if (isNaN(a)) {
         console.error  ("error age")
-         }
-       
-        else { if (a < age_2) {
+      }  else { if (a < age_2) {
     
             console.log ("You don’t have access cause your age is " + ages + "  It’s less then ")
             
@@ -174,6 +172,7 @@ function age3 (ages) {
    age3(17)
    age3(18)
    age3(61)
+   age3("Ss")
 /*
 4***:
 Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке*/
@@ -183,9 +182,9 @@ function age3 (ages) {
     function age4 () {
         let  yuorage = parseInt(prompt ("How old are you ?"))
         
-        if ( typeof yuorage !== "number") {
-            console.error  ("error age");
-             } else { 
+        if (isNaN(yuorage)) {
+            console.error  ("error age")
+          }  else { 
            if (yuorage < age_2) {
         
                 console.log ("You don’t have access cause your age is " + yuorage + "  It’s less then ")
