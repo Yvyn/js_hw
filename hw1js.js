@@ -150,54 +150,40 @@ function age2 (ages) {
 /*3**:
 Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number*/
 
-function age3 (ages) {
-    let a = (Number(ages))
-    if (isNaN(a)) {
-        console.error  ("error age")
-      }  else { if (a < age_2) {
-    
-            console.log ("You don’t have access cause your age is " + ages + "  It’s less then ")
-            
-           } else if (a >=  age_2 && a <  age_3) {console.log ("Welcome  !")
-           
-           } else if (a  > age_3) {console.log ("Keep calm and look Culture channel") }
-           else {
-               console.log ("Technical work ")  
-           }
-    
-    }}
-   
-   
+function age3 (age) {
+    age = Number(age)
+if(age && !isNaN(age)) { 
+
+    if( age < age_2) {console.log ("You don’t have access cause your age is " + age + "  It’s less then ")} 
+    else if (age >=  age_2 && age <  age_3) {console.log ("Welcome  !")}
+    else if (age  > age_3) {console.log (" Keep calm and look Culture channel") }
+    else {console.log ("Technical work ")  }
+} else  {console.error  ("error age")}}
+  
        
    age3(17)
    age3(18)
    age3(61)
    age3("Ss")
+
+
 /*
 4***:
 Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке*/
 
+function age4 () {
+    let  yuorage = parseInt(prompt ("How old are you ?"))
+    
+if(yuorage && !isNaN(yuorage)) { 
 
+    if( yuorage < age_2) {console.log ("You don’t have access cause your age is " + yuorage + "  It’s less then ")} 
+    else if (yuorage >=  age_2 && yuorage <  age_3) {console.log ("Welcome  !")}
+    else if (yuorage  > age_3) {console.log (" Keep calm and look Culture channel") }
+    else {console.log ("Technical work ")  }
+} else  {console.error  ("error age")}}
+  
 
-    function age4 () {
-        let  yuorage = parseInt(prompt ("How old are you ?"))
-        
-        if (isNaN(yuorage)) {
-            console.error  ("error age")
-          }  else { 
-           if (yuorage < age_2) {
-        
-                console.log ("You don’t have access cause your age is " + yuorage + "  It’s less then ")
-                
-               } else if (yuorage >=  age_2 && yuorage <  age_3) {console.log ("Welcome  !")
-               
-               } else if (yuorage  > age_3) {console.log ("Keep calm and look Culture channel") }
-               else {
-                   console.log ("Technical work ")  
-               }
-        
-        }}
-        
+    
 
 age4()
 
