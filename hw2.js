@@ -4,15 +4,16 @@
 
 
 
-function power(a, b){
-    let result = 1;
-    for(let i = 0; i <b; i++)
-    {
-        result = result * a;
-    }
-    console.log(result);
+var number = 2;
+var power = 10;
+var result = 1;
+var cnt = 1;
+while (cnt <= power){
+  result = result * number;
+  console.log(result)
+  cnt++;
 }
-power(2,10);
+
 
 //
 
@@ -43,10 +44,10 @@ power2(10);
 
 let str = '';
 for (let i = 0; i < 5; i++) {
+ 
 	str = str + ':)';
 	console.log (str);
 }
-
 
 /*
 
@@ -57,14 +58,15 @@ e.g. function printSmile(stroka, numberOfRows)*/
 function printSmile(stroka, numberOfRows){
     let str = '';
     for (let i = 0; i < numberOfRows; i++) {
-        str = str + stroka;
+        str += stroka;
         console.log(str );
     }}
 
 
 
 
-printSmile("hi", 3 )
+    printSmile("hi", 3 )
+
 
 /*3**.  Написать функцию, которая принимает на вход слово. Задача функции посчитать и вывести в консоль, сколько в слове гласных, и сколько согласных букв.
 e.g. function getWordStructure(word)
