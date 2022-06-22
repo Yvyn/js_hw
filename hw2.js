@@ -56,7 +56,7 @@ e.g. function printSmile(stroka, numberOfRows)*/
 
 
 function printSmile(stroka, numberOfRows){
-    for (let i = 0; i <= numberOfRows; i++) {
+    for (let i = 1; i <= numberOfRows; i++) {
         console.log(stroka.repeat(i));
     }}
 
