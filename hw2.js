@@ -77,7 +77,7 @@ function getWordStructure(word) {
         let count_v = 0;
         let count_c = 0;
         const vowels = ['a', 'e', 'i', 'o', 'u'];
-        const consonants = ["b", "c", "d", "fF", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+        const consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
 
       word.forEach(el =>{
         if (vowels.includes(el)) count_v ++
