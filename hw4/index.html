@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>String Validation</title>
+</head>
+
+<body>
+    <form onsubmit="return validateForm()">
+        <label for="inputString">Input String:</label>
+        <input type="text" id="inputString" name="inputString">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="output"></p>
+
+    <script>
+
+
+
+        function validateForm() {
+            let inputString = document.getElementById("inputString").value.trim();
+            let outputField = document.getElementById("output");
+
+            if (!inputString) {
+                outputField.innerHTML = "Error: The string cannot be empty.";
+                return false;
+            }
+
+            if (inputString.length < 5) {
+                outputField.innerHTML = "Error: The string must be at least 5 characters long.";
+                return false;
+            }
+
+            if (inputString.length > 64) {
+                outputField.innerHTML = "Error: The string cannot be longer than 64 characters.";
+                return false;
+            }
+
+            if (!/[a-zA-Z]/.test(inputString)) {
+                outputField.innerHTML = "Error: The string must contain letters.";
+                return false;
+            }
+
+            if (!/[A-Z]/.test(inputString)) {
+                outputField.innerHTML = "Error: The string must contain at least one uppercase letter.";
+                return false;
+            }
+
+            if (!/\d/.test(inputString)) {
+                outputField.innerHTML = "Error: The string must contain at least one number.";
+                return false;
+            }
+
+            if (inputString.indexOf("@") < 0) {
+                outputField.innerHTML = "Error: The string must contain the @ symbol.";
+                return false;
+            }
+
+            outputField.innerHTML = "The input string is valid.";
+            return true;
+        }
+
+
+
+        /*
+Напишите валидационный скрипт используя функции 
+
+1. Скрипт должен на вход принимать строку.+
+2. После проверки строки выводить в консоль сообщение где будет конкретно написано, что не так в ведённой строке.
+3. Минимум 5 символов в строке
+4. Максимум 64 символа в строке
+5. В строке должны быть буквы
+6. Должна быть хотя бы одна буква в верхнем регистре
+7. Должна быть хотя бы одна цифра
+8. Должна быть хотя бы одна @
+9. Строка не должна быть пустой+*/
+    </script>
+</body>
+
+</html>
